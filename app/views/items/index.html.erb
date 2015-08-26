@@ -1,1 +1,22 @@
+<h1>Items</h1>
+
 <%= link_to 'New Item', new_item_path %>
+
+<table class="table" border="1">
+  <thead>
+  <tr>
+    <th>Date</th>
+    <th>Name</th>
+    <th>Qty</th>
+    <th>Unit price</th>
+  </tr>
+  </thead>
+  <% @items.each do |item| %>
+      <tbody>
+      <td><%= item.created_at %></td>
+      <td><%= link_to item.name, item %></td>
+      <td><%= item.quantity %></td>
+      <td><%= item.unit_price %></td>
+      </tbody>
+  <% end %>
+</table>
