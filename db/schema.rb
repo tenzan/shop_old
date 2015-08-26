@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150826062400) do
+ActiveRecord::Schema.define(version: 20150826125156) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -31,8 +31,10 @@ ActiveRecord::Schema.define(version: 20150826062400) do
     t.decimal  "unit_price"
     t.string   "url"
     t.text     "note"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+    t.date     "shipped_at"
+    t.date     "delivered_at"
   end
 
   add_foreign_key "comments", "items"

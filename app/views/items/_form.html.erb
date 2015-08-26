@@ -5,6 +5,8 @@
     <%= f.input :unit_price %>
     <%= f.input :url %>
     <%= f.input :note %>
+    <%= f.input :shipped_at, as: :date, html5: true %>
+    <%= f.input :delivered_at, as: :date, html5: true  %>
 
     <%= f.button :submit, class: 'btn-primary' %>
 <% end %>

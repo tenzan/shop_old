@@ -17,7 +17,7 @@ RSpec.feature 'Users can edit existing comments' do
 
     expect(page).to have_content 'Comment has been updated.'
 
-    within('#comment h2') do
+    within('#comments') do
       expect(page).to have_content 'Ship ASAP please!'
       expect(page).not_to have_content comment.body
     end
