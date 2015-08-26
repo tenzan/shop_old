@@ -27,7 +27,7 @@ class CommentsController < ApplicationController
   def update
     if @comment.update(comment_params)
       flash[:notice] = 'Comment has been updated.'
-      redirect_to [@item, @comment]
+      redirect_to @item
     else
       flash.now[:alert] = 'Comment has not been updated.'
       render 'edit'
