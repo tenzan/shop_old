@@ -49,11 +49,4 @@ RSpec.feature 'Users can edit existing items' do
     expect(page).to have_content 'Item has not been updated.'
   end
 
-  scenario 'when providing empty unit price' do
-    fill_in 'Unit price', with: ''
-    click_button 'Update Item'
-
-    expect(page).to have_content 'Item has not been updated.'
-  end
-
 end

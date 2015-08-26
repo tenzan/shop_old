@@ -22,6 +22,5 @@ RSpec.feature 'Users can create new items' do
     expect(page).to have_content 'Item has not been created.'
     expect(page).to have_content "Name can't be blank"
     expect(page).to have_content "Quantity can't be blank"
-    expect(page).to have_content "Unit price can't be blank"
   end
 end
