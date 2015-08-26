@@ -11,7 +11,7 @@ class CommentsController < ApplicationController
 
     if @comment.save
       flash[:notice] = 'Comment has been created.'
-      redirect_to [@item, @comment]
+      redirect_to @item
     else
       flash.now[:alert] = 'Comment has not been created.'
       render 'new'
