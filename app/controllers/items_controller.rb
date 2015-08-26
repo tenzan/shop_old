@@ -1,4 +1,6 @@
 class ItemsController < ApplicationController
+  before_action :set_item, only: [:show, :edit, :update, :destroy]
+
   def index
     @items = Item.all
   end
@@ -20,7 +22,20 @@ class ItemsController < ApplicationController
   end
 
   def show
-    @item = Item.find(params[:id])
+  end
+
+  def edit
+  end
+
+  def update
+
+    if @item.update(item_params)
+      flash[:notice] = 'Item has been updated.'
+      redirect_to @item
+    else
+      flash.now[:alert] = 'Item has not been updated.'
+      render 'edit'
+    end
   end
 
   private
