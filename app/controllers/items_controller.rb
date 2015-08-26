@@ -38,6 +38,14 @@ class ItemsController < ApplicationController
     end
   end
 
+  def destroy
+
+    @item.destroy
+
+    flash[:notice] = 'Item has been deleted.'
+    redirect_to items_path
+  end
+
   private
 
   def set_item
