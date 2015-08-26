@@ -1,36 +1,10 @@
-<%= form_for(@item) do |f| %>
+<%= simple_form_for(@item) do |f| %>
 
-    <% if @item.errors.any? %>
-        <div id="error_explanation">
-          <h2><%= pluralize(@item.errors.count, 'error') %>
-            prohibited this item from being saved:</h2>
-          <ul>
-            <% @item.errors.full_messages.each do |msg| %>
-                <li><%= msg %></li>
-            <% end %>
-          </ul>
-        </div>
-    <% end %>
+    <%= f.input :name %>
+    <%= f.input :quantity %>
+    <%= f.input :unit_price %>
+    <%= f.input :url %>
+    <%= f.input :note %>
 
-    <p>
-      <%= f.label :name %><br>
-      <%= f.text_field :name %>
-    </p>
-    <p>
-      <%= f.label :quantity %><br>
-      <%= f.text_field :quantity %>
-    </p>
-    <p>
-      <%= f.label :unit_price %><br>
-      <%= f.text_field :unit_price %>
-    </p>
-    <p>
-      <%= f.label :url %><br>
-      <%= f.text_field :url %>
-    </p>
-    <p>
-      <%= f.label :note %><br>
-      <%= f.text_field :note %>
-    </p>
-    <%= f.submit %>
+    <%= f.button :submit, class: 'btn-primary' %>
 <% end %>
