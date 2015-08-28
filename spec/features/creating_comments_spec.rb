@@ -1,12 +1,12 @@
 require 'rails_helper'
 
 RSpec.feature 'Users can create new comments' do
-  let(:user) { FactoryGirl.create(:user) }
+  let(:author) { FactoryGirl.create(:user) }
 
   before do
     item = FactoryGirl.create(:item, name: 'Shampoo', quantity: 3,
                               unit_price: 100.50, url: 'http://google.com',
-                              note: 'Looking forward!')
+                              note: 'Looking forward!', author: author)
 
     visit item_url(item)
     click_link 'New Comment'

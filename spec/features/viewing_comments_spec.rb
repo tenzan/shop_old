@@ -1,10 +1,12 @@
 require 'rails_helper'
 
 RSpec.feature 'Users can view comments' do
+  let(:author) { FactoryGirl.create(:user) }
+
   before do
     shampoo = FactoryGirl.create(:item, name: 'Shampoo', quantity: 3,
                                  unit_price: 100.50, url: 'http://google.com',
-                                 note: 'Looking forward!')
+                                 note: 'Looking forward!', author: author)
     FactoryGirl.create(:comment, item: shampoo, body: 'Ship ASAP!')
 
     conditioner = FactoryGirl.create(:item, name: 'Conditioner', quantity: 2,

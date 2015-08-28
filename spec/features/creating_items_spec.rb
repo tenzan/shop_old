@@ -1,7 +1,9 @@
 require 'rails_helper'
 
 RSpec.feature 'Users can create new items' do
+  let(:user) { FactoryGirl.create(:user) }
   before do
+    login_as(user)
     visit '/'
 
     click_link 'New Item'
@@ -15,6 +17,7 @@ RSpec.feature 'Users can create new items' do
     click_button 'Create Item'
 
     expect(page).to have_content 'Item has been created.'
+    expect(page).to have_content "Author: #{user.email}"
   end
   scenario 'when providing invalid attributes' do
     click_button 'Create Item'

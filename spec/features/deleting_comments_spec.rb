@@ -1,7 +1,8 @@
 require 'rails_helper'
 
 RSpec.feature 'Users can delete tickets' do
-  let(:item) { FactoryGirl.create(:item) }
+  let(:author) { FactoryGirl.create(:user) }
+  let(:item) { FactoryGirl.create(:item, author: author) }
   let(:comment) { FactoryGirl.create(:comment, item: item) }
 
   before do

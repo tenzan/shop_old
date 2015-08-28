@@ -11,6 +11,7 @@ class ItemsController < ApplicationController
 
   def create
     @item = Item.new(item_params)
+    @item.author = current_user
 
     if @item.save
       flash[:notice] = 'Item has been created.'

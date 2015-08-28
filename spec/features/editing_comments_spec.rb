@@ -1,7 +1,8 @@
 require 'rails_helper'
 
 RSpec.feature 'Users can edit existing comments' do
-  let(:item) { FactoryGirl.create(:item) }
+  let(:author) { FactoryGirl.create(:user) }
+  let(:item) { FactoryGirl.create(:item, author: author) }
   let(:comment) do
     FactoryGirl.create(:comment, item: item)
   end

@@ -1,10 +1,12 @@
 require 'rails_helper'
 
 RSpec.feature 'User can delete items' do
+  let(:author) { FactoryGirl.create(:user) }
+
   scenario 'successfully' do
     FactoryGirl.create(:item, name: 'Shampoo', quantity: 3,
                        unit_price: 100.50, url: 'http://google.com',
-                       note: 'Looking forward!')
+                       note: 'Looking forward!', author: author)
 
     visit '/'
     click_link 'Shampoo'
