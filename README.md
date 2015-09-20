@@ -26,5 +26,4 @@
 
 7. When all ordered items
 
-
-[ ![Codeship Status for tenzan/shop](https://codeship.com/projects/0fbe69b0-3d6c-0133-c041-22d459b325ce/status?branch=master)](https://codeship.com/projects/102506)
+[ ![Codeship Status for tenzan/shop](https://codeship.com/projects/50338a10-41c6-0133-53e9-4252ee2bf12d/status?branch=master)](https://codeship.com/projects/102506)
