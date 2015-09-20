@@ -25,3 +25,6 @@
 6. Once admin finds an item that user is looking for, user will need to approve that so that admin will purchase that item.
 
 7. When all ordered items
+
+
+[ ![Codeship Status for tenzan/shop](https://codeship.com/projects/0fbe69b0-3d6c-0133-c041-22d459b325ce/status?branch=master)](https://codeship.com/projects/102506)
