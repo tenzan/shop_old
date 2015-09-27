@@ -11,10 +11,11 @@ class CreditsController < ApplicationController
 
   def create
     @credit = Credit.new(credit_params)
+    @credit.author = current_user
 
     if @credit.save
       flash[:notice] = 'Credit has been created.'
-      redirect_to @credit
+      redirect_to credits_path
     else
       flash.now[:alert] = 'Credit has not been created.'
       render 'new'

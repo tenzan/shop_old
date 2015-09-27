@@ -2,12 +2,14 @@ require 'rails_helper'
 
 RSpec.feature 'Users can create new items' do
   let(:user) { FactoryGirl.create(:user) }
+
   before do
     login_as(user)
     visit '/'
 
     click_link 'New Item'
   end
+
   scenario 'with valid attributes' do
     fill_in 'Name', with: 'Shampoo'
     fill_in 'Quantity', with: 3

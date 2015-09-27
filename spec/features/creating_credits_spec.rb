@@ -1,8 +1,11 @@
 require 'rails_helper'
 
 RSpec.feature 'Users can create new credits' do
+  let(:user) { FactoryGirl.create(:user) }
 
   before do
+    login_as(user)
+
     visit credits_url
     click_link 'New Credit'
   end
