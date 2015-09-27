@@ -23,7 +23,7 @@
         <tr>
           <td><%= link_to credit.id, credit %></td>
           <td><%= credit.created_at %></td>
-          <td><%= credit.amount %></td>
+          <td><%= link_to credit.amount, credit %></td>
         </tr>
     <% end %>
   </table>
