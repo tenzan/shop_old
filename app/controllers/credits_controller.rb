@@ -29,6 +29,13 @@ class CreditsController < ApplicationController
   end
 
   def update
+    if @credit.update(credit_params)
+      flash[:notice] = 'Credit has been updated.'
+      redirect_to credits_url
+    else
+      flash.now[:alert] = 'Credit has not been updated.'
+      render 'edit'
+    end
   end
 
   def destroy
