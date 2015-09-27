@@ -1,0 +1,28 @@
+<header>
+
+  <h1>Credits History</h1>
+
+  <ul class="actions">
+    <li>
+      <%= link_to 'New Credit', new_credit_path, class: 'new' %>
+    </li>
+  </ul>
+
+</header>
+
+<div class="panel panel-default">
+  <table class="table table-striped table-hover">
+    <thead>
+    <tr>
+      <th>Date (JST)</th>
+      <th>Amount</th>
+    </tr>
+    </thead>
+    <% @credits.each do |credit| %>
+        <tr>
+          <td><%= credit.created_at %></td>
+          <td><%= credit.amount %></td>
+        </tr>
+    <% end %>
+  </table>
+</div>
