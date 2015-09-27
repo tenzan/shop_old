@@ -21,18 +21,18 @@ RSpec.feature 'Users can create new credits' do
     expect(page).to have_content 'Credit has not been created.'
   end
 
-  # scenario 'with zero value' do
-  #   fill_in 'Amount', with: 0.00
-  #   click_button 'Create Credit'
-  #
-  #   expect(page).to have_content 'Credit has not been created.'
-  # end
-  #
-  # scenario 'with negative value' do
-  #   fill_in 'Amount', with: -100.00
-  #   click_button 'Create Credit'
-  #
-  #   expect(page).to have_content 'Credit has not been created.'
-  # end
+  scenario 'with zero value' do
+    fill_in 'Amount', with: 0.00
+    click_button 'Create Credit'
+
+    expect(page).to have_content 'Credit has not been created.'
+  end
+
+  scenario 'with negative value' do
+    fill_in 'Amount', with: -100.00
+    click_button 'Create Credit'
+
+    expect(page).to have_content 'Credit has not been created.'
+  end
 
 end
