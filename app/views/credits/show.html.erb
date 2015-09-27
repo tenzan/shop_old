@@ -1,0 +1,23 @@
+<div id="credit">
+
+  <header>
+    <h1>Credit</h1>
+  </header>
+
+  <header>
+    <h2><%=@credit.amount %></h2>
+
+    <ul class="actions">
+      <li><%= link_to 'Edit Credit', edit_credit_path(@credit), class: 'edit' %></li>
+      <li>
+        <%= link_to 'Delete Credit',
+                    item_path(@credit),
+                    method: :delete,
+                    data: {confirm: 'Are you sure you want to delete this credit?'},
+                    class: 'delete'
+        %>
+      </li>
+    </ul>
+  </header>
+
+</div>

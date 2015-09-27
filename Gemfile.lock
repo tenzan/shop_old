@@ -63,6 +63,7 @@ GEM
       execjs
     coffee-script-source (1.9.1.1)
     daemons (1.2.3)
+    database_cleaner (1.4.1)
     debug_inspector (0.0.2)
     devise (3.5.1)
       bcrypt (~> 3.0)
@@ -248,6 +249,7 @@ DEPENDENCIES
   byebug
   capybara (~> 2.4)
   coffee-rails (~> 4.1.0)
+  database_cleaner (~> 1.4.0)
   devise (~> 3.5)
   factory_girl_rails (~> 4.5)
   font-awesome-rails (~> 4.3)

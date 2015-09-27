@@ -25,6 +25,19 @@ class CreditsController < ApplicationController
   def show
   end
 
+  def edit
+  end
+
+  def update
+  end
+
+  def destroy
+    @credit.destroy
+
+    flash[:notice] = 'Credit has been deleted.'
+    redirect_to credits_path
+  end
+
   private
 
   def set_credit
