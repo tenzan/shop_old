@@ -54,6 +54,10 @@ GEM
       rack (>= 1.0.0)
       rack-test (>= 0.5.4)
       xpath (~> 2.0)
+    codecov (0.1.1)
+      json
+      simplecov
+      url
     coderay (1.1.0)
     coffee-rails (4.1.0)
       coffee-script (>= 2.2.0)
@@ -237,6 +241,7 @@ GEM
     uglifier (2.7.1)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
+    url (0.3.2)
     warden (1.2.3)
       rack (>= 1.0)
     web-console (2.2.1)
@@ -254,6 +259,7 @@ DEPENDENCIES
   bootstrap-sass (~> 3.3)
   byebug
   capybara (~> 2.4)
+  codecov
   coffee-rails (~> 4.1.0)
   database_cleaner (~> 1.4.0)
   devise (~> 3.5)

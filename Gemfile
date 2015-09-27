@@ -56,6 +56,7 @@ group :test do
   gem 'factory_girl_rails', '~> 4.5'
   gem 'guard-rspec'
   gem 'database_cleaner', '~> 1.4.0'
+  gem 'codecov', :require => false
   gem 'simplecov', :require => false
 end
 
